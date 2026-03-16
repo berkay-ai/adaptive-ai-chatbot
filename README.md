@@ -1,4 +1,9 @@
-Adaptive EchoBot Project
+## Adaptive AI Chatbot
+
+A conversational AI chatbot built with Python and NLP techniques including language detection and sentiment analysis.  
+The bot dynamically adapts responses based on user sentiment and preferences.
+
+Tech stack: Python, NLP (NLTK), Bot Framework, Flask
 
 1. Project Overview
 
