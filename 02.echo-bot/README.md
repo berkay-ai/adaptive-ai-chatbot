@@ -1,118 +1,81 @@
-﻿Adaptive EchoBot Project
+# Adaptive AI Chatbot
 
-1. Project Overview
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![NLP](https://img.shields.io/badge/NLP-Sentiment%20Analysis-green)
+![Chatbot](https://img.shields.io/badge/AI-Chatbot-orange)
 
-This project started as a simple “echo bot” that I built earlier in the semester to learn how basic message handling works. Later, I decided to improve that simple version and turn it into a smarter chatbot using AI features.
+A Python-based conversational AI chatbot that adapts responses based on user language, sentiment, and preferences.
 
-In this version, the bot not only repeats or replies but also detects the user’s language, analyzes their sentiment, and adapts its responses based on the user’s preferences and emotional tone. The goal was to make the chatbot feel more natural and human-like — something that reacts differently when the user sounds positive, frustrated, or neutral.
+This project demonstrates how core NLP techniques can be applied to build more natural and adaptive user interactions.
 
-Even though it’s still a basic-level project, it shows how small AI components can make a simple chatbot more intelligent and user-friendly.
+---
 
-2. Features
+## Overview
 
-- Language Detection: Supports both English and Turkish.
+This project started as a simple echo bot and was later enhanced with AI-driven features such as sentiment analysis and language detection. The chatbot dynamically adjusts its tone and response style based on user input, making interactions more human-like and context-aware.
 
-- Sentiment Analysis: Detects if a message is positive, negative, or neutral.
+---
 
-- Adaptive Responses: Bot changes its tone or length depending on mood or commands.
+## Features
 
-- User Preferences: Users can set preferences with simple commands like:
+- Language detection (English & Turkish)
+- Sentiment analysis (positive, negative, neutral)
+- Adaptive response generation based on user mood
+- User preference handling (/short, /casual, /reset)
+- Context-aware conversational flow
 
-  /short → shorter replies
+---
 
-  /casual → more friendly tone
+## Tech Stack
 
-  /reset → restore default settings
+Python  
+Flask  
+NLTK (VADER Sentiment Analysis)  
+Microsoft Bot Framework  
 
-- Clean Interaction Flow: Replies are generated smoothly with context-aware behavior.
+---
 
-3. Technologies Used
+## How It Works
 
-Python 3.13
+Each user message is processed in three steps: language detection, sentiment analysis, and adaptive response generation based on sentiment and user preferences.
 
-BotBuilder SDK for Python
+---
 
-NLTK (VADER Sentiment Analyzer)
+## Project Structure
 
-Flask for local server setup
+bots/  
+echo_bot.py  
 
-Bot Framework Emulator for testing
+analyzer.py  
+intents.py  
+services.py  
+app.py  
+config.py  
+requirements.txt  
 
-4. File Structure
+---
 
-02.echo-bot/
-│
-├── bots/
-│   ├── __init__.py
-│   ├── echo_bot.py        # Main bot logic (language, sentiment, preferences)
-│
-├── analyzer.py            # Language and sentiment analyzer
-├── intents.py             # Intent recognition (simple keywords)
-├── services.py            # Response service for intents
-├── app.py                 # Flask entry point for running the bot
-├── config.py              # Configuration file
-├── .env.example           # Environment variable example
-├── .gitignore             # Hidden files and cache ignore setup
-├── requirements.txt       # All dependencies
-└── README.md              # Project documentation
+## How to Run
 
-5. How to Run
+python3 -m venv venv  
+source venv/bin/activate  
+pip install -r requirements.txt  
+python app.py  
 
-Create and activate a virtual environment:
+Bot Framework Emulator üzerinden şu endpoint ile bağlanabilirsiniz:  
+http://localhost:3978/api/messages
 
-python3 -m venv venv
-source venv/bin/activate
+---
 
+## Project Context
 
-Install dependencies:
+This project reflects hands-on experience in building NLP-based conversational systems and designing structured interaction logic for real-world AI applications.
 
-pip install -r requirements.txt
+---
 
+## Future Improvements
 
-Run the bot:
-
-python app.py
-
-
-Open Bot Framework Emulator:
-
-Connect to http://localhost:3978/api/messages
-
-Chat with your bot!
-
-6. How It Works (Short Summary)
-
-When a user sends a message, the bot first detects the language (English or Turkish), then performs a sentiment analysis (positive, neutral, or negative). Based on that result and the user’s preference commands, it selects the right tone and reply.
-
-For example:
-
-If the user says something negative like “It’s not working”, the bot responds in a calm, supportive way.
-
-If the user says something positive, it reacts more cheerfully.
-
-If the user types /short or /casual, it changes its reply style immediately.
-
-7. Testing & Examples
-
-The project was tested using the Bot Framework Emulator.
-Each feature was verified with screenshots, including:
-
-Language detection (Figure 1–2)
-
-Sentiment-based responses (Figure 3–4)
-
-Preference handling and reset behavior (Figure 5–6)
-
-Through the tests, the bot correctly switched between languages, adapted to user tone, and restored defaults after a reset command.
-
-8. Future Improvements
-
-Add a simple GUI or web interface for better visuals
-
-Store user preferences in a small database
-
-Add support for more languages and advanced NLP models
-
-9. License / Note
-
-This project was created for academic purposes as part of a hands-on exercise to explore Adaptive User Interfaces (AUI) and Intelligent User Interaction concepts using Python.
+- Persistent user preference storage  
+- Multi-language expansion  
+- Integration with advanced LLM models  
+- Web-based interface  
