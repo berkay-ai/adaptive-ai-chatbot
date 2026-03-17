@@ -1,5 +1,9 @@
 ## Adaptive AI Chatbot
 
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![NLP](https://img.shields.io/badge/NLP-Sentiment%20Analysis-green)
+![Chatbot](https://img.shields.io/badge/AI-Chatbot-orange)
+
 A conversational AI chatbot built with Python and NLP techniques including language detection and sentiment analysis.  
 The bot dynamically adapts responses based on user sentiment and preferences.
 
