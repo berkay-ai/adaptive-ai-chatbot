@@ -62,7 +62,7 @@ source venv/bin/activate
 pip install -r requirements.txt  
 python app.py  
 
-Bot Framework Emulator üzerinden şu endpoint ile bağlanabilirsiniz:  
+You can connect via the Bot Framework Emulator using the following endpoint: 
 http://localhost:3978/api/messages
 
 ---
